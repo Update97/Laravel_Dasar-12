@@ -38,3 +38,5 @@ memanggil database dengan helequent ORM
 -Create =>menambahkan data pada halaman view request dari database
 -Update =>mengubah data yang ada pada db dan menampilkan kembali pada form
 -Delete => menghapus data di halaman form dan db dengan query 
+
+7.Kedepannya saya akan menjadi Expert Web developer Laravel
