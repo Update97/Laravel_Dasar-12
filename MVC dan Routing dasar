@@ -1,0 +1,42 @@
+Materi dasar untuk belajar MVC dalam Laravel 12 (Models, View, dan Controller)
+1.Pemahaman dasar Structure folder & Configuration Guide env
+
+2.Memahami MVC (Model, View, Controller)
+->.View =>View adalah apa yang dilihat oleh pengguna (HTML, CSS, JavaScript). Di Laravel, View menggunakan mesin bernama Blade.
+Layout dan Inheritance => untuk memungkinkan menulis baris code lebih simple 
+sehingga kita tidak perlu menuliskan baris code lebih kompleks tiap layout cukup dengan (@yield, @extend, @section, @include) maka automatis sudah terpanggil secara otomatis
+
+->Controller bertindak sebagai perantara Tugas: Mengolah logika program, seperti mengecek apakah user sudah login atau menghitung total belanja sebelum ditampilkan.
+
+->Model bertugas mengelola data dan aturan bisnis aplikasi. Di Laravel, Model biasanya berinteraksi dengan database menggunakan Eloquent ORM.
+Tugas: Mengambil data dari tabel, menyimpan data baru, atau memvalidasi aturan data sebelum masuk ke database.
+
+3.Controller 
+Alur Kerja Kontroler (Step-by-Step)
+Menerima Request: Ketika user mengetik URL atau mengklik tombol, Route akan mengarahkan permintaan tersebut ke metode (function) tertentu di dalam Controller.
+
+Mengolah Logika: Di dalam Controller, Anda menulis logika bisnis. Misalnya: mengecek apakah stok barang masih ada, menghitung diskon, atau memvalidasi data form.
+
+Interaksi dengan Model: Jika butuh data dari database, Controller akan memanggil Model. Controller tidak mengambil data sendiri; ia hanya "meminta" ke Model.
+
+Mengirim Response: Setelah data didapat dan diproses, Controller membungkus hasil tersebut dan mengirimkannya ke View untuk ditampilkan ke user, atau melakukan Redirect ke halaman lain.
+
+4.Models
+untuk membuat atau menentukan database yang dibutuhkan 
+dgn cara php artisan migrate
+php artisan migrate => untuk membuat atau mengupdate database tanpa harus kehilangan data
+php artisan migrate:fresh => untuk menambahkan database dengan menghapus data tabel lama ke yang baru
+
+5.Seeders
+untuk mengisi data pada tabel yang sudah dibuat pada model
+
+https://www.youtube.com/watch?v=zHV-qefOYS8&list=PLPqeNG7ba3a_Sz3tJ1YukfqHE5jZGBmHn&index=8
+
+6.CRUD day4
+memanggil database dengan helequent ORM
+-Read =>Menampilkan data dari database ke tampilan View
+-Create =>menambahkan data pada halaman view request dari database
+-Update =>mengubah data yang ada pada db dan menampilkan kembali pada form
+-Delete => menghapus data di halaman form dan db dengan query database
+
+7.Kedepannya saya akan menjadi Expert Web developer Laravel 12
