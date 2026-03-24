@@ -23,13 +23,13 @@ class ProdukController extends Controller
         })->get(); // query untuk mengambil semua data yang ada di db (tb_produk)
         // $queryBuilder = DB::table('produks')->get(); //query untuk menampilkan semua data yang ada di tabel db
         // dd($data);
-        return view('pages.show',[
+        return view('pages.produk.show',[
             'data_toko'=>$toko,
             'data_produk'=>$produk,
     ]);
     }
     public function create(){
-        return view('pages.add');
+        return view('pages.produk.add');
     }
 
     public function store(Request $request){
@@ -62,7 +62,7 @@ class ProdukController extends Controller
           //query builder 
         //   DB::table('tb_produk')->where('id_produk', $id)->firstOrFail();
 
-        return view('pages.detail',[
+        return view('pages.produk.detail',[
             'produk'=>$data
         ] );
           
@@ -72,7 +72,7 @@ class ProdukController extends Controller
     public function edit($id){
         $data = produk::findOrFail($id);
         
-        return view('pages.edit',[
+        return view('pages.produk.edit',[
             'data'=>$data,
         ]);
         
@@ -82,13 +82,11 @@ class ProdukController extends Controller
     $request->validate([ //validasi data terlebih dahulu sebelum eksekusi update data
         'nama_produk'      => 'required|min:8',
         'harga'            => 'required|numeric',
-        'stok'             => 'rquired|numeric', 
         'deskripsi_produk' => 'required',
     ], [
         'nama_produk.min'           => 'Nama produk minimal 8 karakter',
         'nama_produk.required'      => 'Nama produk wajib diisi',
         'harga.required'            => 'Masukan format harga yang benar',
-        'stok.rquired'              => 'Masukan format stok yang benar',
         'deskripsi_produk.required' => 'Deskripsi produk wajib diisi',
     ]);
 

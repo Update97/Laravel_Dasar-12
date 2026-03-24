@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\VerificationController;
@@ -60,5 +61,7 @@ Route::get('/product/{id}',[ProdukController::class,'show']); // untuk menampilk
 Route::get('product/{id}/edit',[ProdukController::class,'edit']);//Update data (untuk mengubah/mengupdate data)
 Route::put('/product/{id}',[ProdukController::class,'update']); //untuk mengolah data yang telah dikirim dari form efit data ke db
 Route::delete('/product/{id}',[ProdukController::class,'destroy']); //method untuk menghapus data
+
+Route::resource('kategori',KategoriController::class); // Routing dengan resource
 
 Route::get('/logout', [AuthController::class, 'logout']);

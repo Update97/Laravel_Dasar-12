@@ -73,8 +73,8 @@
                                             class="btn btn-sm btn-outline-warning" title="Edit">
                                             <i class="bi bi-pencil"></i> Edit
                                         </a>
-                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#hapus{{ $item->id_produk }}">
+                                        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal"
+                                            data-target="#hapus{{ $item->id_produk }}">
                                             <i class="bi bi-trash"></i> Hapus
                                         </button>
                                     </div>
@@ -106,7 +106,7 @@
                         Apakah anda yakin ingin menghapus produk {{ $item->nama_produk }}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-danger">Lanjutkan</button>
                     </div>
                 </form>
