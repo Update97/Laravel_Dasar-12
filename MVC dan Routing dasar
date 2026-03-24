@@ -11,6 +11,8 @@ sehingga kita tidak perlu menuliskan baris code lebih kompleks tiap layout cukup
 ->Model bertugas mengelola data dan aturan bisnis aplikasi. Di Laravel, Model biasanya berinteraksi dengan database menggunakan Eloquent ORM.
 Tugas: Mengambil data dari tabel, menyimpan data baru, atau memvalidasi aturan data sebelum masuk ke database.
 
+->View bertugas menampilkan Response berupa tampilan UI terhadap user
+
 3.Controller 
 Alur Kerja Kontroler (Step-by-Step)
 Menerima Request: Ketika user mengetik URL atau mengklik tombol, Route akan mengarahkan permintaan tersebut ke metode (function) tertentu di dalam Controller.

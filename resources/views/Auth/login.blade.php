@@ -20,17 +20,17 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ asset('adminlte/index2.html') }}"><b>Belajar</b>Auth</a>
+            <a href="{{ asset('adminlte/index2.html') }}"><b>Sign</b>In</a>
         </div>
         <!-- /.login-logo -->
-        <div class="card">
-            <div class="card-body login-card-body">
+        <div class="card" style="border-radius: 20px">
+            <div class="card-body login-card-body" style="border-radius: 20px">
                 @if (session('failed'))
                     <div class="alert alert-danger">
                         {{ session('failed') }}
                     </div>
                 @endif
-                <p class="login-box-msg">Silahkan Login untuk memulai sesi Anda</p>
+                <p class="login-box-msg">Silahkan Login sesi Anda</p>
 
                 <form action="/login" method="POST">
                     @csrf
@@ -72,19 +72,19 @@
                     </div>
                 </form>
 
+                <!-- /.social-auth-links -->
                 <div class="social-auth-links text-center mb-3">
                    <br>
                     <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> Sign in dengan Facebook
+                        <i class="fab fa-facebook mr-3"></i> Sign in dengan Facebook
                     </a>
-                    <a href="#" class="btn btn-block btn-success">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in dengan Google+
+                    <a href="#" class="btn btn-block btn-success" style="">
+                        <i class="fab fa-google mr-3"></i> Sign in dengan Google
                     </a>
                 </div>
-                <!-- /.social-auth-links -->
 
                 <p class="mb-1">
-                    <a href="forgot-password.html">Lupa Password?</a>
+                    <a href="/reset">Lupa Password?</a>
                 </p>
                 <p class="mb-0">
                     <a href="/register" class="text-center">Daftar untuk akun baru</a>
