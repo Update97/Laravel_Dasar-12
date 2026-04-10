@@ -46,16 +46,6 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="row">
-                        <div class="col-sm-6">
-                            <div class="mb-3">
-                                <label class="form-label">Stok Produk</label>
-                                <input type="number" name="harga" class="form-control">
-                                @error('harga')
-                                    <div id="emailHelp" class="form-text text-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div> --}}
                     </div>
                     <div class="col-12">
                         <div class="form-floating mb-3">

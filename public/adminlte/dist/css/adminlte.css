@@ -85,7 +85,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #680909;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -11907,7 +11907,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .text-sm .content-header .breadcrumb {
   line-height: 1.5rem;
-}
+}hold-transition
 
 .hold-transition .content-wrapper,
 .hold-transition .main-header,

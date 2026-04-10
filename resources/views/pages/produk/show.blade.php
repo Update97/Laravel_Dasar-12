@@ -36,7 +36,7 @@
                             <th scope="col" class="text-center" style="width: 5%">No</th>
                             <th scope="col">Nama Produk</th>
                             <th scope="col" style="width: 15%">Harga</th>
-                            <th scope="col" style="width: 15%">Stok Barang</th>
+                            <th scope="col" style="width: 15%">Kategori</th>
                             <th scope="col">Deskripsi Produk</th>
                             <th scope="col" class="text-center" style="width: 20%">Aksi</th>
                         </tr>
@@ -55,7 +55,7 @@
                                 </td>
                                 <td>
                                     <span class="badge bg-light text-dark border">
-                                        52
+                                       {{ $item->nama_kategori }}
                                     </span>
                                 </td>
                                 <td> 

@@ -14,12 +14,18 @@ return new class extends Migration
         //sintaks dibawah untuk membuat tabel produk atau menyesuaikan kebutuhan
         Schema::create('produks', function (Blueprint $table) {
             $table->id('id_produk');
+            $table->string('kode_produk')->unique();
             $table->string('nama_produk',150);
-            $table->integer('harga');
-            $table->integer('kategori_id');
+            $table->bigInteger('harga');
+            $table->unsignedBigInteger('kategori_id');
+            $table->integer('stok');
             $table->text('deskripsi_produk');
+            $table->string('gambar')->nullable();
             $table->timestamps();
+
+            $table->foreign('kategori_id')->references('id_kategori')->on('kategori')->onDelete('cascade');
         });
+        
     }
 
     /**

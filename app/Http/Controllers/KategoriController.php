@@ -34,8 +34,8 @@ class KategoriController extends Controller
             'deskripsi_kategori'     => 'required',
         ],[
             'nama_kategori.min'           =>'nama kategori minimal 5 karakter',
-            'nama_kategori.required'      =>'masukan nama kategori yang sesuai',
-            'deskripsi.required' =>'Deskripsi wajib di isi',
+            'nama_kategori.required'      =>'Nama kategori tidak boleh kosong',
+            'deskripsi.required'          =>'Deskripsi wajib di isi',
         ]);
 
         //simpan data ke db

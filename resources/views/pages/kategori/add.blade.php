@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-    <h2>Halaman tambah kategori</h2>
+    <h3>Halaman tambah kategori</h3>
     <div class="card">
         <div class="card-header bg-dark" style="color :aliceblue">Tambah Data</div>
         <div class="card-body">

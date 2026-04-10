@@ -20,7 +20,11 @@ class ProdukController extends Controller
 
         $produk = produk::when($search,function($query,$search){
             return $query->where('nama_produk','like',"%{$search}%");
-        })->get(); // query untuk mengambil semua data yang ada di db (tb_produk)
+        },function($query){
+            return $query;
+        })
+        ->join('kategori','produks.kategori_id','=','kategori.id_kategori')
+        ->get(); // query untuk mengambil semua data yang ada di db (tb_produk)
         // $queryBuilder = DB::table('produks')->get(); //query untuk menampilkan semua data yang ada di tabel db
         // dd($data);
         return view('pages.produk.show',[
@@ -39,6 +43,7 @@ class ProdukController extends Controller
             'harga'            => 'required|numeric',
             'deskripsi_produk' => 'required',
         ],[
+            'nama_produk.required'       =>'nama produk wajib di isi',
             'nama_produk.min'            =>'nama produk minimal 8 karakter',
             'harga.required'             =>'masukan format harga yg benar',
             'deskripsi_produk.required'  =>'Deskripsi wajib diisi',

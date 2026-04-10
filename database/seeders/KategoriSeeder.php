@@ -13,14 +13,14 @@ class KategoriSeeder extends Seeder
      */
     public function run(): void
     {
-       DB::table('kategori')->insert([
-        [
-            'nama_kategori' => 'Asus',
-            'deskripsi'     => 'Barang Elektronik original ASUS'
-       ],[
-            'nama_kategori' => 'Samsung',
-            'deskripsi'     => 'Barang Elektronik original Samsung'   
-        ]
-            ],); 
+      DB::table('kategori')->insert([
+            [
+                'nama_kategori'=>'Elektronik',
+                'deskripsi'    =>'Barang elektronik dengan kualitas terbaik'
+            ],[
+                'nama_kategori'=>'Rumah tangga',
+                'deskripsi'    =>'Barang Rumah tangga dengan kualitas terbaik'
+            ],
+        ]);
     }
 }

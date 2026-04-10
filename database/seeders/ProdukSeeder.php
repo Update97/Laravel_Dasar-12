@@ -13,27 +13,34 @@ class ProdukSeeder extends Seeder
      */
     public function run(): void
     {
+        
         //Query untuk menambahkan data pada tabel
        DB::table('produks')->insert([
             [
-                'nama_produk'=>'Smart TV Samsung 24 Inch',
-                'harga'=>'15000000',
+                'kode_produk'     => 'A001',
+                'nama_produk'     =>'Smart TV Samsung 24 Inch',
+                'harga'           =>15000000,
                 'deskripsi_produk'=>'ini adalah sebuah deskripsi dummy',
-                'kategori_id'=>'2',
-                'created_at'=>now()
+                'stok'            =>100,
+                'kategori_id'     =>'1',
+                'created_at'      =>now()
             ],[
-                'nama_produk'=>'Smart TV LG 24 Inch',
-                'harga'=>'10000000',
+                'kode_produk'     => 'A002',
+                'nama_produk'     =>'Smart TV Samsung 32 Inch',
+                'harga'           =>25000000,
                 'deskripsi_produk'=>'ini adalah sebuah deskripsi dummy',
-                'kategori_id'=>'2',
-                'created_at'=>now()
+                'stok'            =>50,
+                'kategori_id'     =>'1',
+                'created_at'      =>now()
             ],[
-                'nama_produk'=>'Smart TV Aqua 24 Inch',
-                'harga'=>'25000000',
+                'kode_produk'     => 'A003',
+                'nama_produk'     =>'Kompor Listrik',
+                'harga'           =>5000000,
                 'deskripsi_produk'=>'ini adalah sebuah deskripsi dummy',
-                'kategori_id'=>'2',
-                'created_at'=>now()
+                'stok'            =>50,
+                'kategori_id'     =>'2',
+                'created_at'      =>now()
             ]
-       ],);
+       ]);
     }
 }

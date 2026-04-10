@@ -7,6 +7,7 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\VerificationController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,11 +50,13 @@ Route::group(['middleware' =>['auth', 'checkrole:customer', 'checkstatus']], fun
 //Route untuk cek role 
 Route::group(['middleware'=> ['auth', 'checkrole:admin,staff']], function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/transaksi', [DashboardController::class, 'indextransaksi']);
 });
 Route::group(['middleware'=> ['auth', 'checkrole:admin']], function () {
     Route::get('/user', fn() => 'halaman user');
 });
 
+Route::get('/UserIndex', [UserController::class, 'UserIndex']);
 Route::get('/product',[ProdukController::class,'index']); //Read data (menampilkan data)
 Route::get('/product/create',[ProdukController::class,'create']); //untuk menampilkan form data
 Route::post('/product',[ProdukController::class,'store']); //untuh mengolah data yang telah dikirim dari halaman form data
